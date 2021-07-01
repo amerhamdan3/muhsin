@@ -40,4 +40,8 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Faq
     Route::post('faqs/media', 'FaqApiController@storeMedia')->name('faqs.storeMedia');
     Route::apiResource('faqs', 'FaqApiController');
+
+    // Options
+    Route::post('options/media', 'OptionsApiController@storeMedia')->name('options.storeMedia');
+    Route::apiResource('options', 'OptionsApiController');
 });

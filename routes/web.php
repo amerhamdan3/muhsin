@@ -68,6 +68,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('faqs/media', 'FaqController@storeMedia')->name('faqs.storeMedia');
     Route::post('faqs/ckmedia', 'FaqController@storeCKEditorImages')->name('faqs.storeCKEditorImages');
     Route::resource('faqs', 'FaqController');
+
+    // Options
+    Route::delete('options/destroy', 'OptionsController@massDestroy')->name('options.massDestroy');
+    Route::post('options/media', 'OptionsController@storeMedia')->name('options.storeMedia');
+    Route::post('options/ckmedia', 'OptionsController@storeCKEditorImages')->name('options.storeCKEditorImages');
+    Route::resource('options', 'OptionsController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
