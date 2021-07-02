@@ -135,6 +135,8 @@ return [
             'images_helper'         => ' ',
             'videos'                => 'videos',
             'videos_helper'         => ' ',
+            'slug'                  => 'Slug',
+            'slug_helper'           => ' ',
         ],
     ],
     'basicCRM' => [

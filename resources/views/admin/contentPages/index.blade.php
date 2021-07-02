@@ -26,6 +26,9 @@
                             {{ trans('cruds.contentPage.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.contentPage.fields.slug') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.contentPage.fields.title') }}
                         </th>
                         <th>
@@ -59,6 +62,9 @@
                             </td>
                             <td>
                                 {{ $contentPage->id ?? '' }}
+                            </td>
+                            <td>
+                                {{ $contentPage->slug ?? '' }}
                             </td>
                             <td>
                                 {{ $contentPage->title ?? '' }}

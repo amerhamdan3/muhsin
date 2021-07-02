@@ -17,6 +17,11 @@ class StoreContentPageRequest extends FormRequest
     public function rules()
     {
         return [
+            'slug' => [
+                'string',
+                'required',
+                'unique:content_pages',
+            ],
             'title' => [
                 'string',
                 'required',
