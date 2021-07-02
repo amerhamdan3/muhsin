@@ -17,6 +17,11 @@ class UpdateContentPageRequest extends FormRequest
     public function rules()
     {
         return [
+            'slug' => [
+                'string',
+                'required',
+                'unique:content_pages,slug,' . request()->route('content_page')->id,
+            ],
             'title' => [
                 'string',
                 'required',
